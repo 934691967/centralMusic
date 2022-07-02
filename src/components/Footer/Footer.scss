@@ -1,0 +1,155 @@
+.footer{
+    margin-top: 91px;
+    &__head{
+        width: 100%;
+        height: auto;
+        padding: 40px 0;
+        background-color: $titelsColor;
+        &_col{
+            @include flex(center, space-between);
+            @include media(768){
+                flex-direction: column;
+            }
+            .footer__head_col-left{
+                @include flex(center, left);
+                @include media(768){
+                    justify-content: center;
+                }
+                .store{
+                        position: relative;
+                        padding: 20px 0;
+                        padding-right: 30px;
+                        @include media(768){
+                            display: none;
+                        }
+                        &::before{
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        bottom: 10px;
+                        width: 40%;
+                        height: 3px;
+                        background-color: #fff;
+                    }
+                    .store_myaccount{
+                        font-weight: 700;
+                        font-size: 14px;
+                        line-height: 130%;
+                        color: #FFFFFF;
+                    }
+                    .account_myaccount{
+                        font-weight: 700;
+                        font-size: 14px;
+                        line-height: 130%;
+                        color: #FFFFFF;
+                    }
+                    ul{
+                        li{
+                            margin: 5px 0;
+                            a{
+                                font-weight: 400;
+                                font-size: 14px;
+                                line-height: 130%;
+                                color: #FFFFFF;
+                            }
+                        }
+                    }
+                }
+                .account{
+                    position: relative;
+                    padding: 20px 0;
+                    padding-right: 30px;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        bottom: 10px;
+                        width: 40%;
+                        height: 3px;
+                        background-color: #fff;
+                    }
+                    .store_myaccount{
+                        font-weight: 700;
+                        font-size: 14px;
+                        line-height: 130%;
+                        color: #FFFFFF;
+                    }
+                    .account_myaccount{
+                        font-weight: 700;
+                        font-size: 14px;
+                        line-height: 130%;
+                        color: #FFFFFF;
+                    }
+                    ul{
+                        li{
+                            margin: 5px 0;
+                            a{
+                                font-weight: 400;
+                                font-size: 14px;
+                                line-height: 130%;
+                                color: #FFFFFF;
+                                padding-bottom: 15px;
+                            }
+                            @include media(768){
+                                margin: 11px 0;
+                            }
+                        }
+                    }
+                    @include media(768){
+                        margin: auto;
+                        text-align: center;
+                        padding-right: 0;
+                        &::before{
+                            left: 50%;
+                            top: 0;
+                            bottom: 20px;
+                            transform: translate(-50%, 50%);
+                        }
+                    }
+                }
+            }
+            .footer__head_col-right{
+                &__logo{
+                    margin-bottom: 16px;
+                    @include media(768){
+                        display: none;
+                    }
+                }
+                &__icons{
+                    @include flex(center, right);
+                    .box_icon{
+                        margin-left: 20px;
+                        cursor: pointer;
+                        transition: .4s;
+                        &:hover{
+                            transform: translateY(-6px);
+                        }
+                        @include media(768){
+                            // margin-left: 0;
+                            // margin-left: 20px;
+                            margin: 0 10px;
+                        }
+                    }
+                    @include media(768){
+                        width: 100%;
+                        justify-content: center;
+                    }
+                    
+                }
+            }
+        }
+    }
+    &__foot{
+        width: 100%;
+        height: auto;
+        padding: 20px 0;
+        background-color: $gearColor1;
+        p{
+            color: #fff;
+            font-weight: bold;
+            font-size: 17px;
+        }
+    }
+}

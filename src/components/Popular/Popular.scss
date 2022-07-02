@@ -1,0 +1,68 @@
+.popular{
+    margin-bottom: 80px;
+    width: 100%;
+    height: auto;
+    padding: 88px 0;
+    background-color: $gearColor2;
+}
+.popular__cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    & > :nth-child(4){
+        display: none;
+        @include media(1024){
+            display: block;
+        }
+    }
+    &_card{
+        width: 400px;
+        @include media(1310){
+            width: 100%;
+        }
+        margin: auto;
+        background: #FFFFFF;
+        border-radius: 0px 0px 10px 10px;
+        filter: drop-shadow(0px 2px 4px rgba(28, 5, 77, 0.1)) drop-shadow(0px 12px 32px rgba(0, 0, 0, 0.05));
+        border-radius: 10px;
+        cursor: pointer;
+         transition: .4s;
+            &:hover{
+                transform: translateY(-10px);
+                box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+            }
+        &-head{
+            width: 100%;
+            height: 60%;
+            text-align: center;
+            position: relative;
+        }
+        &-main{
+            padding: 16px 24px;
+            .popularbrend{
+                padding: 6px 0;
+            }
+            .popularproduct{
+                margin-bottom: 45px;
+                &__desc{
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 130%;
+                    color: #767676;
+                }
+            }
+            .popularcolors{
+                padding: 3px 5px;
+                border: 1px solid #ccc;
+                border-radius: 30px;
+                width:  175px;
+                &__desc{
+                    font-weight: 500;
+                    font-size: 15px;
+                    line-height: 130%;
+                    color: #767676;
+                }
+            }
+        }
+    }
+}
